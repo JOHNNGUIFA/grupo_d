@@ -44,19 +44,17 @@ class Agenda:
             if contato.telefone == telefone:
                 return contato
         return None
-endereco1 = Endereco("Rua da Orla Maritima", "1234", "Vila de Cacuaco", "Provincia Luanda", "País Angola")
-contato1 = Contato("Joao Augusto", "932898270", "johnnguifa6@gmail.com", endereco1, bi="008356715BO041")
+endereco1 = Endereco("Rua da Orla Maritima", 1234, "Vila de Cacuaco", "Provincia Luanda", "País Angola")
+contato1 = Contato("Joao Augusto", "932898270","johnnguifa6@gmail.com", endereco1, bi="008356715BO041")
 agenda = Agenda()
 agenda.adicionar_contato(contato1)
 
 contato_encontrado = agenda.buscar_contato_por_nome("Joao Augusto")
-print(contato_encontrado.nome, contato_encontrado.telefone)
-
-novo_endereco = Endereco("Carrocel", "1010", "Cacuco", "Província Luanda", "País Angola")
-novo_contato = Contato("Nguifa", "945841644", "nguifa@gmail.com", novo_endereco, bi="123456789")
-agenda.editar_contato("Nguifa", novo_contato)
+print("numero e nome", contato_encontrado.nome, contato_encontrado.telefone)
 
 contato_encontrado = agenda.buscar_contato_por_nome("Joao Augusto")
 print(contato_encontrado.endereco.rua)
-
-agenda.remover_contato("Joao Augusto")
+novo_contato=(input("Informe um novo contacto\n"))
+novo_endereco=(input("Informe o novo endereço\n"))
+print("novo contato adicionado",novo_contato)
+print("Endero indicado:",novo_endereco, )
